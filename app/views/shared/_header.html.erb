@@ -6,9 +6,15 @@
     <ul>
       <li><%= link_to "ホーム", root_path %></li>
       <li><%= link_to "求人" %></li>
-      <li><%= link_to "実績" %></li>
-      <li><%= link_to "メッセージ" %></li>
-      <li><%= link_to "プロフィール" %></li>
+      <% if user_signed_in? %>
+        <li><%= link_to "実績" %></li>
+        <li><%= link_to "メッセージ" %></li>
+        <li><%= link_to "プロフィール" %></li>
+        <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか?" } %></li>
+      <% else %>
+        <li><%= link_to "ログイン", new_user_session_path %></li>
+      <% end %>
+      
     </ul>
   </div>
 </nav>
