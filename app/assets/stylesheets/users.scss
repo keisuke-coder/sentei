@@ -1,0 +1,79 @@
+#registrations-new, #registrations-create, #sessions-new, #passwords-new {   
+  h2{
+    margin: 0;
+    font-size: 20px;
+  }
+  form {
+    width: 70%;
+    margin: 20px auto 10px auto;
+    
+    .field {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+
+      input{
+        padding: 5px;
+        font-size: 16px;
+        outline: none;
+        border-radius: 3px;
+        border:solid 1px rgb(175, 173, 173);
+      }
+      input:focus {
+        outline: none;
+        border: solid 1px  rgb(44, 150, 44);
+      }
+    }
+
+    .check-box {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .actions {
+      input {
+        display: block;
+        margin: 20px auto 10px auto;
+        width: 50%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        color: #fff;
+        background-color: rgb(44, 150, 44);
+        outline: none;
+      }
+    }  
+  }
+
+  .secondary-actions {
+    width: 35%;
+    margin: 0 auto;
+    border-top: solid 1px rgb(175, 173, 173);
+    text-align: center;
+    
+    #sign_up, #log_in {
+      width: 100%;
+      display: block;
+      color: #fff;
+      border-radius: 5px;
+      text-align: center;
+      padding: 10px 0;
+      margin: 10px auto;
+    }
+
+    #log_in {
+      background-color: orange;
+    }
+
+    #sign_up {
+      background-color: rgb(82, 82, 252);
+    }
+
+    #forgot_pass {
+      color: rgb(44, 150, 44);
+      margin: 0 auto;
+      text-decoration: underline;
+    }
+  }
+}
