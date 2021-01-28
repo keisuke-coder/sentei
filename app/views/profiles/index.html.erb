@@ -2,26 +2,27 @@
   <div class="head-section">
     <input  placeholder="キーワードを入力">
   </div>
-  <div class="content">
-    <div class="image">
-      <%= image_tag "mako.jpeg" %>
+  <% @profiles.each do |profile| %>
+    <div class="content">
+      <div class="image">
+        <%= image_tag "mako.jpeg" %>
+      </div>
+      <div class="information">
+        <div class="company">
+          <%= profile.company %>
+        </div>
+        <div class="explanation">
+          <%= profile.explanation %>
+        </div>
+        <div class="tel-button">
+          <div class="tel">
+            TEL <%= profile.tel %>
+          </div>
+          <div class="button">
+            <%= link_to "詳細を確認する", "profiles/show" %>
+          </div>
+        </div>
+      </div>  
     </div>
-    <div class="information">
-      <div class="company">
-        神野造園土木
-      </div>
-      <div class="explanation">
-        病院・飲食店・美容院・ネイルサロン・Bar・学生塾など、いろいろな業種の
-        病院・飲食店・美容院・ネイルサロン・Bar・学生塾など、いろいろな業種の
-      </div>
-      <div class="tel-button">
-        <div class="tel">
-          TEL 0120-1234-5678
-        </div>
-        <div class="button">
-          <%= link_to "詳細を確認する", "profiles/show" %>
-        </div>
-      </div>
-    </div>  
-  </div>
+  <% end %>
 </div>
