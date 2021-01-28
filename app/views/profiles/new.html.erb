@@ -1,0 +1,53 @@
+<div class="content-wrapper">
+  <div class="head-section">
+    <h2>プロフィール設定</h2>
+  </div>
+
+  <%= form_with model: @profile, url: root_path, method: :post, local: true do |form| %>
+    <div class="field">
+      <%= form.label "会社名" %>
+      <%= form.text_field :company %>
+    </div>
+
+    <div class="field">
+      <%= form.label "名前" %>
+      <%= form.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= form.label "従業員数" %>
+      <%= form.number_field :employee_num, placeholder: "半角数字" %>
+    </div>
+
+    <div class="field">
+      <%= form.label "営業時間" %>
+      <div class="time">
+        <%= form.time_field :start_time %>&nbsp;〜&nbsp;<%= form.time_field :ending_time %>
+      </div>
+    </div>
+
+    <div class="field">
+      <%= form.label "定休日" %>
+      <%= form.text_field :regular_holiday %>
+    </div>
+
+    <div class="field">
+      <%= form.label "電話番号(ハイフンなし)" %>
+      <%= form.text_field :tel, placeholder: "半角数字" %>
+    </div>
+
+    <div class="field">
+      <%= form.label "郵便番号" %>
+      <%= form.text_field :postal_code %>
+    </div>
+
+    <div class="field">
+      <%= form.label "住所" %>
+      <%= form.text_field :address %>
+    </div>
+    
+    <div class="actions">
+      <%= form.submit "作成" %>
+    </div>
+  <% end %>
+</div>
