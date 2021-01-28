@@ -3,7 +3,7 @@
     <h2>プロフィール設定</h2>
   </div>
 
-  <%= form_with model: @profile, url: root_path, method: :post, local: true do |form| %>
+  <%= form_with model: @profile, local: true do |form| %>
     <div class="field">
       <%= form.label "会社名" %>
       <%= form.text_field :company %>
@@ -38,13 +38,20 @@
 
     <div class="field">
       <%= form.label "郵便番号" %>
-      <%= form.text_field :postal_code %>
+      <div class="postal-code">
+        <%= form.text_field :first_postal_code %> - <%= form.text_field :last_postal_code %>
+      </div>
     </div>
 
     <div class="field">
       <%= form.label "住所" %>
       <%= form.text_field :address %>
     </div>
+
+    <div class="field">
+      <%= form.label "会社説明" %>
+      <%= form.text_area :explanation %>
+    </div> 
     
     <div class="actions">
       <%= form.submit "作成" %>
