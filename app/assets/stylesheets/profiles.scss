@@ -169,3 +169,56 @@
     }
   }
 }
+
+#profiles-new {
+  .content-wrapper {
+    .head-section {
+      h2{
+        margin: 0;
+        font-size: 20px;
+      }
+    }
+    form {
+      width: 70%;
+      margin: 20px auto;
+      
+      .field {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+
+        input{
+          padding: 5px;
+          font-size: 16px;
+          outline: none;
+          border-radius: 3px;
+          border:solid 1px rgb(175, 173, 173);
+        }
+        input:focus {
+          outline: none;
+          border: solid 1px  rgb(44, 150, 44);
+        }
+      }
+
+      .actions{
+        input {
+          display: block;
+          margin: 10px auto;
+          width: 20%;
+          padding: 10px;
+          border: none;
+          border-radius: 30px;
+          font-weight: bold;
+          color: rgb(44, 150, 44);
+          border: solid 1px rgb(44, 150, 44);
+          background-color: #fff;
+        }
+
+        input:hover {
+          background-color: rgb(44, 150, 44);
+          color: #fff;
+        }
+      }   
+    }
+  }
+}
