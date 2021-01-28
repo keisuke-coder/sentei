@@ -40,8 +40,19 @@
         border-radius: 5px;
         font-weight: bold;
         color: #fff;
-        background-color: rgb(44, 150, 44);
         outline: none;
+      }
+
+      .log-in {
+        background-color: orange;
+      }
+
+      .sign-up {
+        background-color:  rgb(82, 82, 252);
+      }
+      
+      .forgot-pass {
+        background-color: rgb(44, 150, 44);
       }
     }  
   }
