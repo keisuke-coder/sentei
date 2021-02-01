@@ -36,10 +36,13 @@
     </div>
   </div>
   <div class="button">
-    <%= link_to "プロフィールを変更", new_profile_path %>
-    <%= link_to "メッセージ", new_profile_path %>
-    <%= link_to "フォロー", new_profile_path %>
-    <%= link_to "フォロー中", new_profile_path %>
+    <% if current_user.id == @profile.user_id %>
+      <%= link_to "プロフィールを変更", edit_profile_path(@profile.id) %>
+    <% else %>
+      <%= link_to "メッセージ", new_profile_path %>
+      <%= link_to "フォロー", new_profile_path %>
+      <%= link_to "フォロー中", new_profile_path %>
+    <% end %>
   </div>
   <div class="explanation">
     <p>
